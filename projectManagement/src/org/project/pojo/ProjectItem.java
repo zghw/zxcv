@@ -3,7 +3,7 @@ package org.project.pojo;
 import java.util.Date;
 
 public class ProjectItem {
-		//项目表信息实体类
+		//项目表信息实体类。。。。。。
 	
 	private int id; //项目id
 	private String projectName;//项目名称
