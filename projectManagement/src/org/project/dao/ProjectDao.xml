@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.project.dao.ProjectDao">
+
+
+	<select resultType="ProjectItem" id="selectall"> 
+				SELECT id,projectName,startDate,endDate,STATUS FROM projectinfo
+	</select>
+	
+	
+	<select id="selectitem" resultType="ProjectItem">
+				SELECT id,projectName,startDate,endDate,STATUS 
+				FROM projectinfo 
+				WHERE id=#{id}
+	</select>
+	
+	<update id="updete" parameterType="ProjectItem">
+				
+UPDATE projectinfo SET STATUS=#{ item.status} WHERE id=#{ item.id}
+	</update>
+</mapper>
